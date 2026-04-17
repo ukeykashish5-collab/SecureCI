@@ -13,7 +13,7 @@
     "build": "tsc",
     "prettier": "prettier --write .",
     "prettier:check": "prettier --check .",
-    "dev": "tsc --watch && node dist/bin/main.js"
+    "dev": "tsx watch bin/main.ts"
   },
   "homepage": "https://github.com/dev-rohit-gupta/SecureCI#readme",
   "bugs": {
@@ -25,14 +25,21 @@
   },
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "dist/bin/main.js",
   "directories": {
     "lib": "lib"
   },
+  "dependencies": {
+    "@babel/parser": "^7.28.5",
+    "@babel/traverse": "^7.28.5",
+    "@babel/types": "^7.28.5"
+  },
   "devDependencies": {
+    "@types/babel__traverse": "^7.28.0",
     "@types/node": "^25.6.0",
     "prettier": "^3.8.3",
+    "tsx": "^4.21.0",
     "typescript": "^6.0.2"
   }
 }
